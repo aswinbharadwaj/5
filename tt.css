@@ -1,0 +1,72 @@
+@CHARSET "ISO-8859-1";
+div
+{
+	//border: 1px solid red;
+}
+#tablediv
+{
+	vertical-align: middle;
+	text-align: center;
+	margin: 0px auto 0px auto;
+}
+
+#attend
+{
+	vertical-align: middle;
+	text-align: center;
+	margin: 0px auto 0px auto;
+}
+
+table
+{ 
+	border-collapse:collapse; 
+	margin: 0px auto 0px auto;
+}
+
+table.TableClass td, table.TableClass th 
+{ 
+	border:2px solid black;
+	padding:0px; 
+	width:100px;
+}
+
+table.attendclass td, table.attendclass th 
+{ 
+	border:2px solid black;
+	padding:0px; 
+	width:80px;
+}
+
+.TableClass div
+{
+	height:40px;
+	width: 100px;
+	background-color: rgb(80, 243, 80);
+	cursor:pointer;
+}
+
+#attend
+{
+	display:none;
+}
+
+.attendclass div
+{
+	width:100px;
+	height:20px;
+	background-color: rgb(175, 230, 35);
+	vertical-align: middle;
+	text-align: center;
+	padding: 1em 0 1em 0;
+	cursor:pointer;
+}
+
+.TableClass div:hover
+{
+	background-color: rgb(165, 253, 165);
+}
+
+.attendclass div:hover
+{
+	background-color:rgb(183, 255, 0);
+}

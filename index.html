@@ -1,0 +1,128 @@
+<!--<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
+    pageEncoding="ISO-8859-1"%>-->
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Project fiVe</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+    <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet" media="screen">
+    <style type="text/css">
+    #pname .sm{
+    	font-size: 1.5em;
+    }
+    #pname .lr{
+    	font-size: 3em;
+    }
+    #left{
+    	margin-top: 50px;
+    }
+    #right{
+    	margin-top: 50px;
+    }
+    </style>
+  </head>
+  <body onload = " document.getElementById('signup').hidden = true; ">
+  	<div class="row-fluid">
+  		<div class="span12">
+   			<div class="navbar navbar-inverse navbar-fixed-top">
+		      <div class="navbar-inner">
+		        <div class="container">
+		        	<a class="brand" href="#" id="pname"><span class="sm">fi</span><span class="lr">V</span><span class="sm">e</span></a>
+		        </div>
+		      </div>
+		    </div>
+
+    <div class="row-fluid">
+  		
+
+
+    <div class="span5" id="left">
+    	<div class="container-fluid">
+		<form class="form-horizontal" action="LoginAuthenticator" method="post">
+		<fieldset>
+		<legend>Welcome</legend>
+	  	<div class="control-group">
+			<label class="control-label" for="username">Username</label>
+	    	<div class="controls">
+	      		<input type="text" id="username" name="username" placeholder="">
+	    	</div>
+	  	</div>
+	  	<div class="control-group">
+	    	<label class="control-label" for="password">Password</label>
+	    	<div class="controls">
+	      		<input type="password" id="password" name="password" placeholder="" >
+	    	</div>
+	  	</div>
+	  	<div class="control-group">
+	  		<div class="controls">
+	  		<label class="radio inline">
+	  			<input type="radio" name="user" id="faculty" value="faculty" checked>
+	 				Faculty
+			</label>
+			<label class="radio inline">
+	  			<input type="radio" name="user" id="admin" value="admin">
+	  				Admin
+			</label>
+			
+			</div>
+			
+	  	</div>
+	  	
+	  	<div class="control-group">
+	  		<div class="controls">
+	  			<button type="submit" class="btn" >Sign in</button>
+			</div>
+
+	  	</div>
+		<div class="control-group">
+	  		<div class="controls">
+	  			<button class="btn btn-primary" type="button" onclick=" document.getElementById('signup').hidden = false;">Sign Up to access</button>	
+			</div>
+
+	  	</div>
+		</fieldset>
+		</form>
+		</div>
+		</div>
+    
+    <div class="span5 offset2" id="right">
+    	
+      	<div class="container-fluid" id="signup">
+    	<form class="form-horizontal" action="SignupController" method="post">
+		<fieldset>
+		<legend>Sign Up</legend>
+	  	<div class="control-group">
+			<label class="control-label" for="facname">Faculty Name</label>
+	    	<div class="controls">
+    			<input type="text" name="facname" id="facname" value=""/>
+    		</div>
+    	</div>
+    	<div class="control-group">
+			<label class="control-label" for="facid">Faculy Id</label>
+	    	<div class="controls">
+    			<input type="text" name="facid" id="facid" value=""/>
+    			<span class="help-block">Will be your Username</span>
+    		</div>
+    	</div>
+    	<div class="control-group">
+			<label class="control-label" for="password">Password</label>
+				<div class="controls">
+    			<input type="password" name="password" id="password" value="" onkeypress="this.type = 'text'" onkeyup="this.type = 'password'" />
+    			</div>
+    	</div>
+    	<div class="control-group">
+    		<div class="controls">
+				<input type="submit"  class="btn" value="Sign Up"/>
+			</div>
+		</div>
+		</fieldset>
+		</form>
+    </div>
+    </div>
+    </div>
+  	</div>
+  	</div>
+	<script src="jquery/jquerymin.js"></script>
+    <script src="bootstrap/js/bootstrap.min.js"></script>
+  </body>
+</html>

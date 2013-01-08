@@ -1,0 +1,83 @@
+<!doctype html>
+<html>
+<head>
+<title>Time Table</title>
+<link rel="stylesheet" href="tt.css" type="text/css" />
+<script type="text/javascript" src="tt.js" /></script>
+</head>
+<body onload="popweek();setDate();poptable();">
+<div id="tablediv">
+Week : <br/>
+<select id="week" onchange="changeweek(this.value);">
+</select>
+<br/><br/>
+	<table class="TableClass" id="stafftable">
+		<tr>
+			<th>Day / Hour</th><th>1</th><th>2</th><th>3</th><th>4</th><th>5</th><th>6</th><th>7</th><th>8</th>
+		</tr>
+		<tr>
+			<th>Monday <br/>( <span id="dt1"></span> )</th>
+			<td id="t11"><!-- this div will be attached dynamically only to cells that have classes --><div id="c11" onclick="attend(this.id);"></div></td>
+			<td id="t12"><div id="c12" onclick="attend(this.id);"></div></td>
+			<td id="t13"><div id="c13" onclick="attend(this.id);"></div></td>
+			<td id="t14"><div id="c14" onclick="attend(this.id);"></div></td>
+			<td id="t15"><div id="c15" onclick="attend(this.id);"></div></td>
+			<td id="t16"><div id="c16" onclick="attend(this.id);"></div></td>
+			<td id="t17"><div id="c17" onclick="attend(this.id);"></div></td>
+			<td id="t18"><div id="c18" onclick="attend(this.id);"></div></td>
+		</tr>
+		<tr>
+			<th>Tuesday <br/>( <span id="dt2"></span> )</th>
+			<td id="t21"><div id="c21" onclick="attend(this.id);"></div></td>
+			<td id="t22"><div id="c22" onclick="attend(this.id);"></div></td>
+			<td id="t23"><div id="c23" onclick="attend(this.id);"></div></td>
+			<td id="t24"><div id="c24" onclick="attend(this.id);"></div></td>
+			<td id="t25"><div id="c25" onclick="attend(this.id);"></div></td>
+			<td id="t26"><div id="c26" onclick="attend(this.id);"></div></td>
+			<td id="t27"><div id="c27" onclick="attend(this.id);"></div></td>
+			<td id="t28"><div id="c28" onclick="attend(this.id);"></div></td>
+		</tr>
+		<tr>
+			<th>Wednesday <br/>( <span id="dt3"></span> )</th>
+			<td id="t31"><div id="c31" onclick="attend(this.id);"></div></td>
+			<td id="t32"><div id="c32" onclick="attend(this.id);"></div></td>
+			<td id="t33"><div id="c33" onclick="attend(this.id);"></div></td>
+			<td id="t34"><div id="c34" onclick="attend(this.id);"></div></td>
+			<td id="t35"><div id="c35" onclick="attend(this.id);"></div></td>
+			<td id="t36"><div id="c36" onclick="attend(this.id);"></div></td>
+			<td id="t37"><div id="c37" onclick="attend(this.id);"></div></td>
+			<td id="t38"><div id="c38" onclick="attend(this.id);"></div></td>
+		</tr>
+		<tr>
+			<th>Thursday <br/>( <span id="dt4"></span> )</th>
+			<td id="t41"><div id="c41" onclick="attend(this.id);"></div></td>
+			<td id="t42"><div id="c42" onclick="attend(this.id);"></div></td>
+			<td id="t43"><div id="c43" onclick="attend(this.id);"></div></td>
+			<td id="t44"><div id="c44" onclick="attend(this.id);"></div></td>
+			<td id="t45"><div id="c45" onclick="attend(this.id);"></div></td>
+			<td id="t46"><div id="c46" onclick="attend(this.id);"></div></td>
+			<td id="t47"><div id="c47" onclick="attend(this.id);"></div></td>
+			<td id="t48"><div id="c48" onclick="attend(this.id);"></div></td>
+		</tr>
+		<tr>
+			<th>Friday <br/>( <span id="dt5"></span> )</th>
+			<td id="t51"><div id="c51" onclick="attend(this.id);"></div></td>
+			<td id="t52"><div id="c52" onclick="attend(this.id);"></div></td>
+			<td id="t53"><div id="c53" onclick="attend(this.id);"></div></td>
+			<td id="t54"><div id="c54" onclick="attend(this.id);"></div></td>
+			<td id="t55"><div id="c55" onclick="attend(this.id);"></div></td>
+			<td id="t56"><div id="c56" onclick="attend(this.id);"></div></td>
+			<td id="t57"><div id="c57" onclick="attend(this.id);"></div></td>
+			<td id="t58"><div id="c58" onclick="attend(this.id);"></div></td>
+		</tr>
+	</table>
+</div>
+<br/>
+<div id="attend">
+Please click the absentees' Reg. No.
+<table class="attendclass" id="attendtable">
+</table>
+<input type="button" value="Submit" onclick="sendlist();"/>
+</div>
+</body>
+</html>

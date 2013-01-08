@@ -1,0 +1,328 @@
+<!--<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
+    pageEncoding="ISO-8859-1"%>-->
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Project fiVe</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+    <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet" media="screen">
+    <style type="text/css">
+    #pname .sm{
+    	font-size: 1.5em;
+    }
+    #pname .lr{
+    	font-size: 3em;
+    }
+    #general{
+    	margin-top: 80px;
+    }
+    #tt{
+    	margin-top: 50px;
+    }
+    .touch{
+        cursor: pointer;
+    }
+    </style>
+    <script type="text/javascript">
+        
+        var details = new Array();
+
+        function getValue(prom,obj)
+        {
+            bootbox.prompt(prom, function(result) {                
+            if (result === null) {                                             
+                
+            } else {
+                obj.innerHTML = result;
+                var temp = obj.getAttribute('name');
+                details[temp] = result;
+            }
+            }); 
+        }
+
+        function display()
+        {
+            alert(details["year"]+details["sec"]+details["charge"]+details["com"]+details["rep"]);
+        }
+        
+    </script>
+  </head>
+  <body>
+    <div class="row-fluid">
+        <div class="span12">
+            <div class="navbar navbar-inverse navbar-fixed-top">
+              <div class="navbar-inner">
+                <div class="container">
+                    <a class="brand" href="#" id="pname"><span class="sm">fi</span><span class="lr">V</span><span class="sm">e</span></a>
+                </div>
+              </div>
+            </div>
+        </div>
+    <div class="row-fluid" id="general">
+        <div class="span8 offset2">
+            <div class="container-fluid">
+                <table class="table table-bordered">
+                    <tr>
+                        <th>
+                            Year : 
+                        </th>
+                        <td id="year" name="year" onclick="getValue('Year',this)" class="touch">
+                                Click to add year
+                        </td>
+                        <th>
+                            Section : 
+                        </th>
+                        <td id="sec" name="sec" onclick="getValue('Section',this)" class="touch">
+                                Click to add section
+                        </td>
+                    </tr>   
+                    <tr>
+                        <th>
+                            Class in charge : 
+                        </th>
+                        <td id="charge" name="charge" onclick="getValue('Class in charge',this)" class="touch">
+                                Click to add In charge
+                        </td>
+                        <th>
+                            Class committee chairperson: 
+                        </th>
+                        <td id="com" name="com" onclick="getValue('Class Committee Chairperson',this)" class="touch">
+                                Click to add Chair 
+                        </td>
+                    </tr>   
+                    <tr>
+                        <th>
+                            Class representatives : 
+                        </th>
+                        <td colspan="3" id="rep" name="rep" onclick="getValue('Class Representatives',this)" class="touch">
+                                Click to add Representative
+                        </td>
+                    </tr>   
+                </table>
+                <table class="table table-bordered" id="tt">
+                    <tr>
+                    <th>
+                        Day / Time
+                    </th>
+                    <th>
+                        1
+                    </th>
+                    <th>
+                        2
+                    </th>
+                    <th>
+                        3
+                    </th>
+                    <th>
+                        4
+                    </th>
+                    <th>
+                        5
+                    </th>
+                    <th>
+                        6
+                    </th>
+                    <th>
+                        7
+                    </th>
+                    <th>
+                        8
+                    </th>
+                </tr>
+                <tr>
+                    <th>
+                        Monday
+                    </th>
+                    <td id="t11" name="t11" onclick="t11()">
+                        <div id="c11" name="c11"> 
+                        </div>
+                    </td>
+                    <td id="t12" name="t12" onclick="t12()">
+                        <div id="c12" name="c12"> 
+                        </div>
+                    </td>
+                    <td id="t12" name="t13" onclick="t13()">
+                        <div id="c13" name="c13"> 
+                        </div>
+                    </td>
+                    <td id="t14" name="t14" onclick="t14()">
+                        <div id="c14" name="c14"> 
+                        </div>
+                    </td>
+                    <td id="t12" name="t15" onclick="t15()">
+                        <div id="c15" name="c15"> 
+                        </div>
+                    </td>
+                    <td id="t16" name="t16" onclick="t16()">
+                        <div id="c16" name="c16"> 
+                        </div>
+                    </td>
+                    <td id="t17" name="t17" onclick="t17()">
+                        <div id="c17" name="c17"> 
+                        </div>
+                    </td>
+                    <td id="t18" name="t18" onclick="t18()">
+                        <div id="c18" name="c18"> 
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <th>
+                        Tuesday
+                    </th>
+                    <td id="t21" name="t21" onclick="t21()">
+                        <div id="c21" name="c21"> 
+                        </div>
+                    </td>
+                    <td id="t22" name="t22" onclick="t22()">
+                        <div id="c22" name="c22"> 
+                        </div>
+                    </td>
+                    <td id="t22" name="t23" onclick="t23()">
+                        <div id="c23" name="c23"> 
+                        </div>
+                    </td>
+                    <td id="t24" name="t24" onclick="t24()">
+                        <div id="c24" name="c24"> 
+                        </div>
+                    </td>
+                    <td id="t22" name="t25" onclick="t25()">
+                        <div id="c25" name="c25"> 
+                        </div>
+                    </td>
+                    <td id="t26" name="t26" onclick="t26()">
+                        <div id="c26" name="c26"> 
+                        </div>
+                    </td>
+                    <td id="t27" name="t27" onclick="t27()">
+                        <div id="c27" name="c27"> 
+                        </div>
+                    </td>
+                    <td id="t28" name="t28" onclick="t28()">
+                        <div id="c28" name="c28"> 
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <th>
+                        Wednesday
+                    </th>
+                    <td id="t31" name="t31" onclick="t31()">
+                        <div id="c31" name="c31"> 
+                        </div>
+                    </td>
+                    <td id="t32" name="t32" onclick="t32()">
+                        <div id="c32" name="c32"> 
+                        </div>
+                    </td>
+                    <td id="t32" name="t33" onclick="t33()">
+                        <div id="c33" name="c33"> 
+                        </div>
+                    </td>
+                    <td id="t34" name="t34" onclick="t34()">
+                        <div id="c34" name="c34"> 
+                        </div>
+                    </td>
+                    <td id="t32" name="t35" onclick="t35()">
+                        <div id="c35" name="c35"> 
+                        </div>
+                    </td>
+                    <td id="t36" name="t36" onclick="t36()">
+                        <div id="c36" name="c36"> 
+                        </div>
+                    </td>
+                    <td id="t37" name="t37" onclick="t37()">
+                        <div id="c37" name="c37"> 
+                        </div>
+                    </td>
+                    <td id="t38" name="t38" onclick="t38()">
+                        <div id="c38" name="c38"> 
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <th>
+                        Thursday
+                    </th>
+                    <td id="t41" name="t41" onclick="t41()">
+                        <div id="c41" name="c41"> 
+                        </div>
+                    </td>
+                    <td id="t42" name="t42" onclick="t42()">
+                        <div id="c42" name="c42"> 
+                        </div>
+                    </td>
+                    <td id="t42" name="t43" onclick="t43()">
+                        <div id="c43" name="c43"> 
+                        </div>
+                    </td>
+                    <td id="t44" name="t44" onclick="t44()">
+                        <div id="c44" name="c44"> 
+                        </div>
+                    </td>
+                    <td id="t42" name="t45" onclick="t45()">
+                        <div id="c45" name="c45"> 
+                        </div>
+                    </td>
+                    <td id="t46" name="t46" onclick="t46()">
+                        <div id="c46" name="c46"> 
+                        </div>
+                    </td>
+                    <td id="t47" name="t47" onclick="t47()">
+                        <div id="c47" name="c47"> 
+                        </div>
+                    </td>
+                    <td id="t48" name="t48" onclick="t48()">
+                        <div id="c48" name="c48"> 
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <th>
+                        Friday
+                    </th>
+                    <td id="t51" name="t51" onclick="t51()">
+                        <div id="c51" name="c51"> 
+                        </div>
+                    </td>
+                    <td id="t52" name="t52" onclick="t52()">
+                        <div id="c52" name="c52"> 
+                        </div>
+                    </td>
+                    <td id="t52" name="t53" onclick="t53()">
+                        <div id="c53" name="c53"> 
+                        </div>
+                    </td>
+                    <td id="t54" name="t54" onclick="t54()">
+                        <div id="c54" name="c54"> 
+                        </div>
+                    </td>
+                    <td id="t52" name="t55" onclick="t55()">
+                        <div id="c55" name="c55"> 
+                        </div>
+                    </td>
+                    <td id="t56" name="t56" onclick="t56()">
+                        <div id="c56" name="c56"> 
+                        </div>
+                    </td>
+                    <td id="t57" name="t57" onclick="t57()">
+                        <div id="c57" name="c57"> 
+                        </div>
+                    </td>
+                    <td id="t58" name="t58" onclick="t58()">
+                        <div id="c58" name="c58"> 
+                        </div>
+                    </td>
+                </tr>
+                </table>
+            </div>
+
+        </div>
+        <button class="btn btn-primary" type="button" onclick="display()">Display</button>
+    </div>
+    </div>
+    <script src="jquery/jquerymin.js"></script>
+    <script src="bootstrap/js/bootstrap.min.js"></script>
+    <script src="bootbox/bootbox.min.js"></script>
+  </body>
+  </html>
